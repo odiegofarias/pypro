@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
-        
+
         return user
 
     # Usuário criados não vêm como superusuários
@@ -70,7 +70,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     EMAIL_FIELD = "email"
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["email"]
+    REQUIRED_FIELDS = []
 
     class Meta:
         verbose_name = _("user")
