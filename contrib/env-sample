@@ -1,3 +1,4 @@
 DEBUG = False
 SECRET_KEY = Defina sua chave
 ALLOWED_HOSTS = '127.0.0.1' + seus dominios
+INTERNAL_IPS = '127.0.0.1'
